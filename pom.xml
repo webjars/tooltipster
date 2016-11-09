@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>tooltipster</artifactId>
-    <version>4.1.5-SNAPSHOT</version>
+    <version>4.1.4-1-SNAPSHOT</version>
     <name>Tooltipster</name>
     <description>WebJar for Tooltipster</description>
     <url>http://webjars.org</url>
@@ -24,7 +24,7 @@
         <requirejs>
             {
                 "paths": {
-                    "tooltipster": "js/jquery.tooltipster"
+                    "tooltipster": "js/tooltipster.bundle"
                 },
                 "shim": {
                     "tooltipster": ["jquery"]
@@ -82,7 +82,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}" />
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/dist" />
                                 </move>
                             </target>
                         </configuration>
